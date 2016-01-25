@@ -10,7 +10,7 @@ docker-compose build
 # Raise the required testing infrastructure.
 docker-compose up -d hub chrome playground
 
-SELENIUM_START_DELAY=5
+SELENIUM_START_DELAY=6
 echo Waiting $SELENIUM_START_DELAY seconds for the Selenium hub \
   to start and the nodes to register...
 sleep $SELENIUM_START_DELAY
