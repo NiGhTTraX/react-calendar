@@ -2,7 +2,7 @@
   "name": "react-calendar",
   "version": "0.0.1",
   "description": "A React component for rendering a calendar",
-  "main": "index.js",
+  "main": "calendar.jsx",
   "scripts": {
     "test:acceptance": "karma start ./tests/acceptance/karma.conf.js",
     "test:acceptance:build": "webpack --config ./tests/acceptance/webpack.config.babel.js",

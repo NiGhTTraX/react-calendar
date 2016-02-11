@@ -2,17 +2,17 @@ import chai from 'chai';
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import calendarFactory from '../../../../src/components/calendar.jsx';
+import dayFactory from '../../../../src/components/day.jsx';
 
 const expect = chai.expect;
 
-const Calendar = calendarFactory();
+const Day = dayFactory();
 
-describe('Calendar', function() {
+describe('Day', function() {
   let component, $component;
 
   beforeEach(function() {
-    component = ReactDOM.render(<Calendar/>, this.container);
+    component = ReactDOM.render(<Day/>, this.container);
     $component = $(ReactDOM.findDOMNode(component));
   });
 

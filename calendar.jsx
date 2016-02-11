@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './calendar.less';
 
+
 export default function calendarFactory() {
   return class Calendar extends Component {
     render() {
