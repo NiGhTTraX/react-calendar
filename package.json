@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test:acceptance": "karma start ./tests/acceptance/karma.conf.js",
+    "test:acceptance:build": "webpack --config ./tests/acceptance/webpack.config.babel.js",
     "test:unit": "karma start ./tests/unit/karma.conf.js",
+    "test:unit:build": "webpack --config ./tests/unit/webpack.config.babel.js",
     "lint": "eslint --ext js --ext jsx ."
   },
   "keywords": [
