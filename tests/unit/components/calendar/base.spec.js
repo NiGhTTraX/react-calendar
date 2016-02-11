@@ -2,11 +2,11 @@ import chai from 'chai';
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import CalendarFactory from '../../../../src/components/calendar.jsx';
+import calendarFactory from '../../../../src/components/calendar.jsx';
 
 const expect = chai.expect;
 
-const Calendar = CalendarFactory();
+const Calendar = calendarFactory();
 
 describe('Calendar', function() {
   let component, $component;

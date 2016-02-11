@@ -9,4 +9,4 @@ export default Object.assign({}, baseConfig, {
     filename: 'acceptance.js',
     path: path.join(__dirname, '..', '..', 'build')
   }
-})
+});

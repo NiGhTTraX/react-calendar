@@ -31,7 +31,6 @@ module.exports = {
 
   colors: true,
   port: 9876,
-  /*logLevel: config.LOG_INFO,*/
   autoWatch: false,
   singleRun: true
 };
