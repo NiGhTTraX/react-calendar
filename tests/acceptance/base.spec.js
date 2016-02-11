@@ -1,35 +1,21 @@
-import webdriverio from 'webdriverio';
 import chai from 'chai';
-import chaiAsPromised from 'chai-as-promised';
-
-
-chai.use(chaiAsPromised);
+import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Calendar from '../../index.js';
 
 const expect = chai.expect;
 
-const SELENIUM_HUB_URL = 'hub';
-const PLAYGROUND_URL = 'http://playground';
 
-const BROWSER_OPTIONS = {
-  host: SELENIUM_HUB_URL,
-  desiredCapabilities: {
-    browserName: 'chrome'
-  }
-};
+describe('Calendar', function() {
+  let component, $component;
 
-
-describe('ReactCalendar', function() {
-  let client;
-
-  before(function() {
-    this.timeout(10 * 1000);
-
-    client = webdriverio.remote(BROWSER_OPTIONS).init();
-
-    return client.url(PLAYGROUND_URL);
+  beforeEach(function() {
+    component = ReactDOM.render(<Calendar/>, this.container);
+    $component = $(ReactDOM.findDOMNode(component));
   });
 
-  it('should be work in progress', function() {
-    return expect(client.getText('.calendar')).to.eventually.contain('WIP');
+  it('should render unfinished stuff', function() {
+    expect($component.text()).to.contain('WIP');
   });
 });

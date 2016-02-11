@@ -4,10 +4,10 @@ let baseConfig = require('../karma.conf.base.js');
 
 module.exports = function(config) {
   baseConfig.files.push(
-    './components/**/*.spec.js'
+    './**/*.spec.js'
   );
 
-  baseConfig.preprocessors['./components/**/*.spec.js'] = ['webpack', 'sourcemap'];
+  baseConfig.preprocessors['./**/*.spec.js'] = ['webpack', 'sourcemap'];
 
   config.set(baseConfig);
 };
