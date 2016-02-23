@@ -7,6 +7,8 @@ module.exports = {
     'space-before-function-paren': 0,
     'comma-dangle': [2, 'never'],
     'one-var': 0,
-    'strict': 0
+    'strict': 0,
+
+    'react/wrap-multilines': 0
   }
 }
