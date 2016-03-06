@@ -6,6 +6,11 @@ module.exports = {
   },
 
   'rules': {
-    'func-names': 0
+    'func-names': 0,
+    'no-unused-expressions': 0
+  },
+
+  'globals': {
+    'expect': false
   }
 };

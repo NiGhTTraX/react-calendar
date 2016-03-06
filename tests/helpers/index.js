@@ -6,3 +6,5 @@
  */
 
 import './rendering.js';
+
+import './expect.js';
