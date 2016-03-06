@@ -16,7 +16,7 @@ describe('Calendar', function() {
     let component, $component;
 
     beforeEach(function() {
-      component = ReactDOM.render(<Calendar date={date}/>, this.container);
+      component = render(<Calendar date={date}/>);
       $component = $(ReactDOM.findDOMNode(component));
     });
 

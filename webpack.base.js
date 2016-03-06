@@ -3,7 +3,7 @@ module.exports = {
     extensions: ['', '.js', '.jsx']
   },
 
-  devtool: 'eval',
+  devtool: 'sourcemap',
 
   module: {
     loaders: [{

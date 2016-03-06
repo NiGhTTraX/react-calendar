@@ -4,6 +4,7 @@
   "description": "A React component for rendering a calendar",
   "main": "calendar.jsx",
   "scripts": {
+    "test": "npm run test:unit && npm run test:acceptance",
     "test:acceptance": "karma start ./tests/acceptance/karma.conf.js",
     "test:acceptance:build": "npm run build -- ./tests/acceptance/webpack.config.babel.js",
     "test:unit": "karma start ./tests/unit/karma.conf.js",
