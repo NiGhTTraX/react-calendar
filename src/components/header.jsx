@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 const MONTH_NAMES = [
   'January',
@@ -18,6 +18,12 @@ const MONTH_NAMES = [
 
 export default function headerFactory() {
   return class Header extends Component {
+    static propTypes = {
+      date: PropTypes.date.isRequired,
+      onPrev: PropTypes.func.isRequired,
+      onNext: PropTypes.func.isRequired
+    };
+
     render() {
       return <div className="header">
         <span className="prev" onClick={this.props.onPrev}>&gt;</span>

@@ -15,10 +15,10 @@ describe('Header', function() {
     const onNextSpy = sinon.spy();
     const onPrevSpy = sinon.spy();
 
-    let component, $component;
+    let $component;
 
     beforeEach(function() {
-      component = render(<Header
+      const component = render(<Header
         date={date}
         onNext={onNextSpy} onPrev={onPrevSpy}
       />, this.container);

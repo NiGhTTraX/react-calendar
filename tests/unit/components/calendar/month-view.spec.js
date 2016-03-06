@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import calendarFactory from '../../../../calendar.jsx';
 import { fakeComponentFactory } from '../../../helpers/chai-react.js';
 import { render } from '../../../helpers/rendering.js';

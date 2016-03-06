@@ -14,10 +14,11 @@ describe('Calendar', function() {
   describe('Month view', function() {
     const date = new Date('February 14, 2016 6:30:15');
 
-    let component, $component;
+    let $component;
 
     beforeEach(function() {
-      component = render(<Calendar date={date}/>);
+      const component = render(<Calendar date={date} />);
+
       $component = $(ReactDOM.findDOMNode(component));
     });
 

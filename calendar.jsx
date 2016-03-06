@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import './calendar.less';
 
 const ONE_WEEK = 7 * 24 * 3600 * 1000;
@@ -6,6 +6,12 @@ const ONE_WEEK = 7 * 24 * 3600 * 1000;
 
 export default function calendarFactory(Header) {
   return class Calendar extends Component {
+    static propTypes = {
+      date: PropTypes.date.isRequired,
+      onNext: PropTypes.func.isRequired,
+      onPrev: PropTypes.func.isRequired
+    };
+
     constructor(props) {
       super(props);
 
