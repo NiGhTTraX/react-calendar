@@ -1,4 +1,12 @@
+var path = require('path'); // eslint-disable-line no-var
+
+
 module.exports = {
+  output: {
+    path: path.join(__dirname, 'build'),
+    publicPath: 'build/'
+  },
+
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
