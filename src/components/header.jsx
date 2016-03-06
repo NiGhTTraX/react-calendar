@@ -19,7 +19,7 @@ const MONTH_NAMES = [
 export default function headerFactory() {
   return class Header extends Component {
     static propTypes = {
-      date: PropTypes.date.isRequired,
+      date: PropTypes.instanceOf(Date).isRequired,
       onPrev: PropTypes.func.isRequired,
       onNext: PropTypes.func.isRequired
     };

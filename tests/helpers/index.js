@@ -8,3 +8,5 @@
 import './rendering.js';
 
 import './expect.js';
+
+import './prop-types.js';
