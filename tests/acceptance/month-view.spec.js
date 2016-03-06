@@ -1,12 +1,13 @@
-import chai from 'chai';
-import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import $ from 'jquery';
 import calendarFactory from '../../calendar.jsx';
+import headerFactory from '../../src/components/header.jsx';
+import { render } from '../helpers/rendering.js';
 
-const expect = chai.expect;
 
-const Calendar = calendarFactory();
+const Header = headerFactory();
+const Calendar = calendarFactory(Header);
 
 
 describe('Calendar', function() {
