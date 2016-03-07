@@ -13,24 +13,20 @@ describe('Calendar', function() {
   describe('Month view', function() {
     const date = new Date('February 14, 2016 6:30:15');
 
-    let component;
-
     beforeEach(function() {
       FakeHeader.reset();
 
-      component = render(<Calendar date={date} />);
+      render(<Calendar date={date} />);
     });
 
     it('should render the header', function() {
       expect(FakeHeader).to.have.been.renderedWith({
-        date,
-        onNext: component.onNext,
-        onPrev: component.onPrev
+        date
       });
     });
 
     it('should add a month to the date when moving forward', function() {
-      component.onNext();
+      FakeHeader.props.onNext();
 
       expect(FakeHeader).to.have.been.renderedWith({
         date: new Date(date.getTime() + ONE_WEEK)
@@ -38,7 +34,7 @@ describe('Calendar', function() {
     });
 
     it('should subtract a month to the date when moving back', function() {
-      component.onPrev();
+      FakeHeader.props.onPrev();
 
       expect(FakeHeader).to.have.been.renderedWith({
         date: new Date(date.getTime() - ONE_WEEK)

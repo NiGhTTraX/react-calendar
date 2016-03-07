@@ -61,10 +61,16 @@ export default (chai) => {
 export function fakeComponentFactory({ name } = { name: 'FakeComponent' }) {
   const _renderSpy = sinon.spy();
 
+  let _lastProps;
+
   return class FakeComponent extends Component {
     static displayName = name;
 
     static renderSpy = _renderSpy;
+
+    static get props() {
+      return _lastProps;
+    }
 
     static reset() {
       _renderSpy.reset();
@@ -72,6 +78,8 @@ export function fakeComponentFactory({ name } = { name: 'FakeComponent' }) {
 
     render() {
       _renderSpy(this.props);
+
+      _lastProps = this.props;
 
       return <div>I am a fake component, here to spy on you!</div>;
     }
